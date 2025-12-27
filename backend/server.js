@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import env from "dotenv/config";
 import connectDB from "./config/db.js";
 import router from "./Routers/goalRouter.js";
@@ -7,6 +8,7 @@ import ErrorHandler from "./Middlewares/ErrorHandler.js";
 const app = express();
 const PORT = process.env.PORT || 5000;
 connectDB();
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/api/goals", router);
