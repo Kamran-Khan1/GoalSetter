@@ -1,114 +1,99 @@
-# project-mern
+# MERN Project
 
-A full-stack MERN (MongoDB, Express, React, Node.js) application.
-
-## Description
-
-This is a MERN Project built with modern web technologies for building scalable web applications.
+A full-stack MERN (MongoDB, Express, React, Node.js) application with JWT authentication.
 
 ## Author
 
-**Kamran Ahmad Khan**
-
-## Tech Stack
-
-- **MongoDB** - NoSQL database
-- **Express.js** - Backend framework
-- **React** - Frontend library
-- **Node.js** - Runtime environment
+Kamran Ahmad Khan
 
 ## Features
 
-- RESTful API with Express
-- MongoDB database integration with Mongoose
-- JWT authentication
-- Password encryption with bcrypt
+- JWT Authentication with bcrypt
+- Protected API routes
+- MongoDB database
+- Express backend
+- React frontend
+
+## Tech Stack
+
+**Backend:**
+
+- Node.js & Express
+- MongoDB & Mongoose
+- JWT for authentication
+- Bcrypt for password hashing
 - CORS enabled
-- Environment variable configuration
-- Hot reload for development
 
-## Prerequisites
+**Frontend:**
 
-Before running this project, make sure you have:
-
-- Node.js (v14 or higher)
-- MongoDB installed and running
-- npm or yarn package manager
+- React
+- Tailwind CSS
 
 ## Installation
 
-1. Clone the repository:
+1. Clone the repository
 
 ```bash
-git clone https://github.com/Kamran-Khan1/GoalSetter.git
-cd GoalSetter
+git clone <repository-url>
+cd project-mern
 ```
 
-2. Install dependencies:
+2. Install dependencies
 
 ```bash
 npm install
 ```
 
-3. Create a `.env` file in the root directory and add your environment variables:
+3. Create `.env` file in root directory
 
 ```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret_key
+JWT_SECRET=your_jwt_secret
 NODE_ENV=development
 ```
 
-## Running the Application
+4. Install frontend dependencies
 
-### Development Mode
+```bash
+cd frontend
+npm install
+```
 
-Run backend server with hot reload:
+## Usage
+
+### Run backend server
 
 ```bash
 npm run server
 ```
 
-Run frontend development server:
+### Run frontend
 
 ```bash
 npm run client
 ```
 
-### Production Mode
-
-Start the application:
-
-```bash
-npm start
-```
-
-Build the frontend:
+### Build for production
 
 ```bash
 npm run build
 ```
 
-## Dependencies
+## API Routes
 
-- **bcrypt** - Password hashing
-- **colors** - Terminal string styling
-- **cors** - Cross-origin resource sharing
-- **dotenv** - Environment variable management
-- **express** - Web framework
-- **express-async-handler** - Async error handling
-- **jsonwebtoken** - JWT authentication
-- **mongodb** - MongoDB driver
-- **mongoose** - MongoDB ODM
+### Authentication
+
+- `POST /api/users/register` - Register new user
+- `POST /api/users/login` - Login user
+
+### Goals (Protected)
+
+- `GET /api/goals` - Get all goals
+- `POST /api/goals` - Create new goal
+- `PUT /api/goals/:id` - Update goal
+- `DELETE /api/goals/:id` - Delete goal
 
 ## License
 
 ISC
-
-## Contributing
-
-Feel free to submit issues and pull requests.
-
-## Contact
-
-For any questions or suggestions, please contact kamrangpai@gmail.com.
